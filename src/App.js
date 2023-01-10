@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import MapContext from './Map/MapContext';
 import { fromLonLat, get as getProjection } from 'ol/proj';
-import { OSM, XYZ } from 'ol/source';
+import { XYZ } from 'ol/source';
 import { Tile as TileLayer } from 'ol/layer';
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
     
     // reset button
     const handleReset = () => {
-      const zoom = map.getView().getZoom() - 1;
+      //const zoom = map.getView().getZoom() - 1;
         map.getView().animate({
           zoom: 15,
           duration: 500,
